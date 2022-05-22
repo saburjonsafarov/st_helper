@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ST Helper</string>
+    <string name="notification">notification</string>
+    <string name="account">account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imageviewforimage">imageViewForImage</string>
+</resources>
