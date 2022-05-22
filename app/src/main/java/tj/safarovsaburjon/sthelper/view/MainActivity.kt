@@ -36,8 +36,7 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         bottomNavigationView.apply {
             setOnItemSelectedListener(this@MainActivity)
             getOrCreateBadge(R.id.newsItem).apply {
-                number = 45558
-
+                number = 12
             }
         }
         toolbar.setOnClickListener(this)
@@ -47,12 +46,16 @@ class MainActivity : BaseActivity(R.layout.activity_main),
             .beginTransaction()
             .replace(
                 R.id.container,
-                AlarmFragment()
+                NewsFragment()
             )
             .commit()
 
 
+    }
 
+    override fun onStop() {
+        super.onStop()
+        finish()
     }
 
     override fun onClick(v: View?) {
@@ -64,22 +67,22 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         when (item.itemId) {
 
             R.id.analyticItem -> {
-                openFragmentHelper(AlarmFragment(), "analytics")
+                openFragmentHelper(ProfileFragment(), "statistics")
                 return true
             }
 
             R.id.newsItem -> {
-                openFragmentHelper(NotificationFragment(), "notifications")
+                openFragmentHelper(NewsFragment(), "news")
                 return true
             }
 
             R.id.alarmItem -> {
-                openFragmentHelper(AlarmFragment(), "alarm")
+                openFragmentHelper(NotificationFragment(), "alarm")
                 return true
             }
 
             R.id.profileItem -> {
-                openFragmentHelper(ProfileFragment(),"profile")
+                openFragmentHelper(ProfileFragment(), "profile")
                 return true
             }
 
@@ -88,10 +91,10 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         return false
     }
 
-    private fun openFragmentHelper(fragment: Fragment, toolbarTitle:String?) {
+    private fun openFragmentHelper(fragment: Fragment, toolbarTitle: String?) {
 
         toolbarTitle?.let {
-        toolbar.title = toolbarTitle
+            toolbar.title = toolbarTitle
         }
         supportFragmentManager
             .beginTransaction()

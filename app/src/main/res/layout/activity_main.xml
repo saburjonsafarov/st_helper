@@ -35,6 +35,7 @@
         android:paddingTop="5dp"
         android:paddingEnd="5dp"
         android:animateLayoutChanges="false"
+        app:itemIconSize="27dp"
         app:itemBackground="@drawable/item_bottom_nav_view"
         app:menu="@menu/bottom_nav_menu" />
 

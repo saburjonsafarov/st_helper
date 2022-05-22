@@ -19,8 +19,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="@color/blue_dark"
+            android:orientation="vertical"
             tools:ignore="UnusedAttribute"
             tools:targetApi="m">
 
@@ -30,7 +30,7 @@
                 android:layout_height="180dp"
                 android:contentDescription="@string/imageviewforimage"
                 android:scaleType="centerCrop"
-                android:src="@color/white" />
+                android:src="@drawable/dpdtt_image" />
 
 
             <RelativeLayout
@@ -41,7 +41,7 @@
                     android:id="@+id/itemTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
+                    android:layout_marginTop="3dp"
                     android:layout_toStartOf="@+id/itemLikeBox"
                     android:background="@color/white"
                     android:ellipsize="end"

@@ -1,6 +1,7 @@
 package tj.safarovsaburjon.sthelper.view
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -26,6 +27,18 @@ class AuthenticationActivity : BaseActivity(R.layout.activity_authentication) {
         submitButton.setOnClickListener {
 
             if (loginChecker("safarovsaburjon2002@gmail.com", "3377")) {
+                loginEditText.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    0,
+                    R.drawable.ic_twotone_check_circle,
+                    0
+                )
+                passwordEditText.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    0,
+                    R.drawable.ic_twotone_check_circle,
+                    0
+                )
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {
@@ -34,8 +47,33 @@ class AuthenticationActivity : BaseActivity(R.layout.activity_authentication) {
                 loginEditText.text.clear()
                 passwordEditText.text.clear()
                 loginEditText.requestFocus()
+                loginEditText.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    0,
+                    R.drawable.ic_twotone_error,
+                    0
+                )
+
+                passwordEditText.setCompoundDrawablesWithIntrinsicBounds(
+                    0,
+                    0,
+                    R.drawable.ic_twotone_error,
+                    0
+
+                )
+
+                loginEditText
+
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        loginEditText.text.clear()
+        passwordEditText.text.clear()
+        loginEditText.requestFocus()
+
     }
 
 

@@ -4,4 +4,4 @@
     android:id="@+id/alarmRecyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AlarmFragment" />
+    tools:context=".view.NewsFragment" />
