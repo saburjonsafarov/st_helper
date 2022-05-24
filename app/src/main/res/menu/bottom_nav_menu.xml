@@ -3,26 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <item
-        android:id="@+id/newsItem"
-        android:icon="@drawable/ic_twotone_mail"
-        app:showAsAction="always"
-        tools:ignore="MenuTitle" />
-
     <item
         android:id="@+id/analyticItem"
         android:icon="@drawable/ic_twotone_statistic"
         tools:ignore="MenuTitle" />
 
     <item
+        android:id="@+id/newsItem"
+        android:icon="@drawable/ic_twotone_mail"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction,MenuTitle" />
+
+
+    <item
         android:id="@+id/alarmItem"
         android:icon="@drawable/ic_twotone_alarm"
         app:showAsAction="always"
         tools:ignore="MenuTitle" />
-    <item
-        android:id="@+id/profileItem"
-        android:icon="@drawable/ic_twotone_person"
-        app:showAsAction="always"
-        tools:ignore="MenuTitle" />
+
 </menu>

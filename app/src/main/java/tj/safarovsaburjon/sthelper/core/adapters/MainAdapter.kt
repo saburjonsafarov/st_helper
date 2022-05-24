@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import tj.safarovsaburjon.sthelper.R
 import tj.safarovsaburjon.sthelper.model.StudentModel
@@ -25,7 +24,7 @@ class MainAdapter(val list: List<StudentModel>, private val onClickListener: Vie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context).inflate(
-            R.layout.item, parent, false
+            R.layout.item_news, parent, false
         )
     )
 
@@ -38,7 +37,7 @@ class MainAdapter(val list: List<StudentModel>, private val onClickListener: Vie
         val state = list[position]
 
         holder.apply {
-            tView.text = state.liked.toString()
+            tView.text = state.id.toString()
             itemView.tag = itemView
             itemView.setOnClickListener(onClickListener)
             likeBox.isChecked = state.liked

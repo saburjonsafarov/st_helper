@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
+    android:paddingBottom="100dp"
     tools:context=".view.AuthenticationActivity">
 
     <ImageView
         android:id="@+id/authenticationBackImageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:ignore="ContentDescription" />
 
 
     <com.google.android.material.card.MaterialCardView
@@ -28,29 +30,65 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/icon_dpdtt" />
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_dpdtt"
+                    tools:ignore="ContentDescription" />
 
-            </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/authenticationSubmitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/blue_dark"
+                    app:cardCornerRadius="25dp"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:drawableTint="@color/white"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:paddingStart="15dp"
+                        android:text="@string/login"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+
 
             <EditText
                 android:id="@+id/authenticationUserIdEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/corner_frame"
-                android:hint="userID"
+                android:hint="@string/userid"
                 android:inputType="textEmailAddress"
-                android:padding="10dp" />
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold"
+                android:autofillHints="emailAddress" />
 
 
             <EditText
@@ -59,29 +97,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corner_frame"
-                android:hint="password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
-                android:padding="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="not account ?"
+                android:minHeight="48dp"
+                android:padding="10dp"
                 android:textColor="@color/blue_dark"
-                android:layout_marginTop="20dp"
-                android:linksClickable="true"
-                android:autoLink="all"/>
+                android:textStyle="bold"
+                android:autofillHints="password" />
 
 
-            <Button
-                android:id="@+id/authenticationSubmitButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/blue_dark"
-                android:text="ворид"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/fingerPrintCardView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_fingerprint"
+                tools:ignore="ContentDescription" />
+
 
         </LinearLayout>
 

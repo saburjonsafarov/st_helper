@@ -16,7 +16,28 @@
         app:navigationIconTint="@color/blue_dark"
         app:title="@string/app_name"
         app:titleTextColor="@color/blue_dark"
-        tools:ignore="UnusedAttribute" />
+        tools:ignore="UnusedAttribute">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/accountItem"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:foreground="@drawable/corner_frame"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dpdtt_image"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
@@ -29,17 +50,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="false"
         android:background="@drawable/corner_top_only"
         android:elevation="8dp"
         android:paddingStart="5dp"
         android:paddingTop="5dp"
         android:paddingEnd="5dp"
-        android:animateLayoutChanges="false"
-        app:itemIconSize="27dp"
         app:itemBackground="@drawable/item_bottom_nav_view"
+        app:itemIconSize="27dp"
         app:menu="@menu/bottom_nav_menu" />
-
-    
 
 
 </RelativeLayout>

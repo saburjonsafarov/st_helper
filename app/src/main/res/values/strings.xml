@@ -5,4 +5,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imageviewforimage">imageViewForImage</string>
+    <string name="saburjon_safarov">Saburjon Safarov</string>
+    <string name="change_theme">change theme</string>
+    <string name="login">ворид</string>
+    <string name="userid">userID</string>
+    <string name="password">password</string>
 </resources>

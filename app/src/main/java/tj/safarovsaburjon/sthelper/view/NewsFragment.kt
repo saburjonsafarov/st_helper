@@ -23,7 +23,6 @@ class NewsFragment : BaseFragmentWithViewModel<AlarmFragmentVM>(
         recyclerView = view.findViewById(R.id.alarmRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = MainAdapter(MainRepository().getList(), this)
-
     }
 
     override fun onClick(v: View?) {
