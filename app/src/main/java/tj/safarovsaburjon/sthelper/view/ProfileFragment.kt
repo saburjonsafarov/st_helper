@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import tj.safarovsaburjon.sthelper.R
 import tj.safarovsaburjon.sthelper.core.base.BaseFragmentWithViewModel
@@ -22,21 +23,36 @@ class ProfileFragment : BaseFragmentWithViewModel<AlarmFragmentVM>(
 
         linearLayout = view.findViewById(R.id.profileLinearLayout)
 
-        repeat(10) {
-            val itemSeting = LayoutInflater.from(requireContext())
-                .inflate(R.layout.setting_item, linearLayout, false)
+        repeat(5) { itm ->
+            val groupItem = LayoutInflater.from(requireContext())
+                .inflate(R.layout.settings_group_item, linearLayout, false)
 
-            linearLayout.addView(itemSeting)
-            itemSeting.tag = it
-            itemSeting.setOnClickListener(this)
+            repeat(4 + itm) {
+                val item = LayoutInflater.from(requireContext())
+                    .inflate(R.layout.setting_item, linearLayout, false)
+                item.tag = it + (itm + 1) * 10
+                item.setOnClickListener(this)
+                groupItem.findViewById<LinearLayout>(R.id.settingsGroupLinearLayout).addView(item)
+            }
+            groupItem
+                .findViewById<TextView>(R.id.settingsGroupTitle)
+                .text = "group: ${(itm + 1) * 10} settings property "
+            linearLayout.addView(groupItem)
 
         }
-
     }
 
     override fun onClick(v: View?) {
         v?.let {
-            Toast.makeText(context, (it.tag as Int).toString(), Toast.LENGTH_SHORT).show()
+            requireActivity()
+                .supportFragmentManager
+                .beginTransaction()
+                .replace(
+                    R.id.containerDetail,
+                    SettingsAdvancedFragment.newInstance((it.tag as Int).toString())
+                )
+                .addToBackStack("add")
+                .commit()
         }
     }
 

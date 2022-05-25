@@ -1,24 +1,20 @@
 package tj.safarovsaburjon.sthelper.view
 
-import android.app.AlertDialog
 import android.content.Intent
+import android.content.IntentFilter
+import android.os.Build
 import android.os.Bundle
-import android.provider.ContactsContract
-import android.view.LayoutInflater
+import android.os.PowerManager
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.navigation.NavigationBarView
 import tj.safarovsaburjon.sthelper.R
 import tj.safarovsaburjon.sthelper.core.base.BaseActivity
-import tj.safarovsaburjon.sthelper.model.StudentModel
 import tj.safarovsaburjon.sthelper.repository.MainRepository
 
 class MainActivity : BaseActivity(R.layout.activity_main),
@@ -28,10 +24,11 @@ class MainActivity : BaseActivity(R.layout.activity_main),
     private lateinit var container: FragmentContainerView
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var accountItem: CardView
-    var c = 0
+    private var c = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         container = findViewById(R.id.container)
         toolbar = findViewById(R.id.toolbar)
@@ -67,12 +64,11 @@ class MainActivity : BaseActivity(R.layout.activity_main),
             .commit()
 
 
+
     }
 
-    override fun onStop() {
-        super.onStop()
-        finish()
-    }
+
+
 
     override fun onClick(v: View?) {
         v?.let {
@@ -87,17 +83,23 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         when (item.itemId) {
 
             R.id.analyticItem -> {
-                openFragmentHelper(ProfileFragment(), "statistics".uppercase())
+                openFragmentHelper(AnalyticsFragment(), "analytics")
                 return true
             }
 
             R.id.newsItem -> {
-                openFragmentHelper(NewsFragment(), "news".uppercase())
+                openFragmentHelper(NewsFragment(), "news")
                 return true
             }
 
             R.id.alarmItem -> {
-                openFragmentHelper(NotificationFragment(), "alarm".uppercase())
+                openFragmentHelper(NotificationFragment(), "alarm")
+                return true
+            }
+
+
+            R.id.timetableItem -> {
+                openFragmentHelper(NotificationFragment(), "timetable")
                 return true
             }
 
@@ -107,14 +109,13 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         return false
     }
 
-    private fun openFragmentHelper(fragment: Fragment, toolbarTitle: String?) {
+    private fun openFragmentHelper(fragment: Fragment, toolbarTitle: String) {
 
-        toolbarTitle?.let {
-            toolbar.title = toolbarTitle
-        }
+        toolbar.title = toolbarTitle.uppercase()
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment)
             .commit()
     }
+
 }

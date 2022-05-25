@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import tj.safarovsaburjon.sthelper.R
-import tj.safarovsaburjon.sthelper.model.StudentModel
+import tj.safarovsaburjon.sthelper.model.NewsModel
 import tj.safarovsaburjon.sthelper.repository.MainRepository
 
 /*
@@ -18,7 +18,7 @@ import tj.safarovsaburjon.sthelper.repository.MainRepository
 * email: safarovsaburjon2002@gmail.com
 */
 
-class MainAdapter(val list: List<StudentModel>, private val onClickListener: View.OnClickListener) :
+class MainAdapter(val list: List<NewsModel>, private val onClickListener: View.OnClickListener) :
     RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
 

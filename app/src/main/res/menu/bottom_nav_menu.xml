@@ -4,16 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/analyticItem"
-        android:icon="@drawable/ic_twotone_statistic"
-        tools:ignore="MenuTitle" />
-
-    <item
         android:id="@+id/newsItem"
         android:icon="@drawable/ic_twotone_mail"
         app:showAsAction="always"
         tools:ignore="AlwaysShowAction,MenuTitle" />
 
+    <item
+        android:id="@+id/analyticItem"
+        android:icon="@drawable/ic_twotone_statistic"
+        tools:ignore="MenuTitle"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/timetableItem"
+        android:icon="@drawable/ic_twotone_timetable"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/alarmItem"

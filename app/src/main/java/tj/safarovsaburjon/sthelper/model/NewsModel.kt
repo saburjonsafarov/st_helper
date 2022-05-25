@@ -6,4 +6,4 @@ package tj.safarovsaburjon.sthelper.model
 * email: safarovsaburjon2002@gmail.com
 */
 
-data class StudentModel(val id: Int, val name: String, var liked: Boolean)
+data class NewsModel(val id: Int, val name: String, var liked: Boolean)

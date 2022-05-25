@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:elevation="4dp"
         app:navigationIcon="@drawable/ic_twotone_lock"
         app:navigationIconTint="@color/blue_dark"
         app:title="@string/app_name"
@@ -19,11 +20,11 @@
         tools:ignore="UnusedAttribute">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/accountItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="10dp"
-            android:id="@+id/accountItem"
             android:foreground="?selectableItemBackground"
             app:cardCornerRadius="100dp">
 
@@ -32,7 +33,7 @@
                 android:layout_height="40dp"
                 android:foreground="@drawable/corner_frame"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dpdtt_image"
+                android:src="@drawable/avatar_image"
                 tools:ignore="ContentDescription" />
 
         </androidx.cardview.widget.CardView>
@@ -50,15 +51,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:animateLayoutChanges="false"
-        android:background="@drawable/corner_top_only"
-        android:elevation="8dp"
+        android:background="@color/white"
         android:paddingStart="5dp"
         android:paddingTop="5dp"
         android:paddingEnd="5dp"
         app:itemBackground="@drawable/item_bottom_nav_view"
         app:itemIconSize="27dp"
         app:menu="@menu/bottom_nav_menu" />
-
 
 </RelativeLayout>

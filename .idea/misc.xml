@@ -10,8 +10,10 @@
         <entry key="app/src/main/res/drawable/corner_frame.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/corner_glass.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/corner_top_only.xml" value="0.1375" />
+        <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/ic_fingerprint.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/ic_fingerprint_green.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_twotone_alarm.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/ic_twotone_analytics.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/ic_twotone_stcap.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/item_bottom_nav_view.xml" value="0.1415" />
@@ -22,16 +24,18 @@
         <entry key="app/src/main/res/drawable/selected_item_theme.xml" value="0.139" />
         <entry key="app/src/main/res/layout-v23/item.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_authentication.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3148148148148148" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.1574074074074074" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/layout/fragment_alarm.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_analytics.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_settings_advanced.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/profile_item.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/setting_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/settings_group_item.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.19270833333333334" />
       </map>
