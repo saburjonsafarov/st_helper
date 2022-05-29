@@ -6,26 +6,23 @@
     <item
         android:id="@+id/newsItem"
         android:icon="@drawable/ic_twotone_mail"
-        app:showAsAction="always"
-        tools:ignore="AlwaysShowAction,MenuTitle" />
+        android:title="@string/news" />
 
     <item
         android:id="@+id/analyticItem"
         android:icon="@drawable/ic_twotone_statistic"
-        tools:ignore="MenuTitle"
-        app:showAsAction="always"/>
+        android:title="@string/analytics" />
 
 
     <item
         android:id="@+id/timetableItem"
         android:icon="@drawable/ic_twotone_timetable"
-        app:showAsAction="always"
-        tools:ignore="MenuTitle" />
+        android:title="@string/timetable" />
+
 
     <item
         android:id="@+id/alarmItem"
         android:icon="@drawable/ic_twotone_alarm"
-        app:showAsAction="always"
-        tools:ignore="MenuTitle" />
+        android:title="alarm" />
 
 </menu>

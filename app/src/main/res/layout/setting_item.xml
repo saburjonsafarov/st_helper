@@ -4,10 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="15dp"
-    android:background="@drawable/corner"
+    android:background="@drawable/selectable_item_background"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="@drawable/selectable_item_backgraund"
     android:orientation="vertical"
     android:padding="5dp"
     tools:ignore="UnusedAttribute">

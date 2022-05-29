@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_dark"
     android:orientation="vertical"
     tools:context=".view.DetailActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="match_parent"
         android:id="@+id/detailActivityToolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:background="@color/white"
         android:elevation="4dp">
 
@@ -77,11 +79,11 @@
         android:background="@color/gray">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fAButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="15dp"
-            android:id="@+id/fAButton"
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/blue_dark"
             android:src="@drawable/ic_baseline_edit_24" />

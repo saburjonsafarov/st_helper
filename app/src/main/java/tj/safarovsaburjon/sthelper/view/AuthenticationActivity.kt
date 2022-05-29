@@ -9,11 +9,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.CancellationSignal
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import tj.safarovsaburjon.sthelper.R
 import tj.safarovsaburjon.sthelper.core.base.BaseActivity
@@ -22,7 +22,7 @@ class AuthenticationActivity : BaseActivity(R.layout.activity_authentication),
     View.OnClickListener {
     private lateinit var passwordEditText: EditText
     private lateinit var loginEditText: EditText
-    private lateinit var submitButton: CardView
+    private lateinit var submitButton: Button
     private lateinit var fingerPrintButton: ImageView
     private lateinit var biometricPrompt: BiometricPrompt
 
@@ -38,7 +38,7 @@ class AuthenticationActivity : BaseActivity(R.layout.activity_authentication),
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
                 super.onAuthenticationSucceeded(result)
                 notifyUser("Authentication Succeeded")
-                fingerPrintButton.setImageResource(R.drawable.ic_fingerprint_green)
+                fingerPrintButton.setImageResource(R.drawable.ic_fingerprint_black)
                 startActivity(Intent(this@AuthenticationActivity, MainActivity::class.java))
                 finish()
 
@@ -151,7 +151,7 @@ class AuthenticationActivity : BaseActivity(R.layout.activity_authentication),
                 }
 
                 fingerPrintButton -> {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    if  (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                         biometricCall()
 
                     } else {

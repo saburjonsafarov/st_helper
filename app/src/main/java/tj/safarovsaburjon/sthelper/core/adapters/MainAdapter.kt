@@ -32,7 +32,7 @@ class MainAdapter(val list: List<NewsModel>, private val onClickListener: View.O
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         if (position == list.lastIndex)
-            holder.itemView.setPadding(0, 0, 0, 100)
+            holder.itemView.setPadding(0, 0, 0, 120)
 
         val state = list[position]
 
@@ -45,7 +45,6 @@ class MainAdapter(val list: List<NewsModel>, private val onClickListener: View.O
                 MainRepository.items[position].liked = likeBox.isChecked
             }
         }
-
 
     }
 

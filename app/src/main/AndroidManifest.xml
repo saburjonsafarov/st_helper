@@ -4,6 +4,7 @@
     package="tj.safarovsaburjon.sthelper">
 
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_polytech"
@@ -12,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.STHelper">
         <activity
+            android:name=".view.AuthenticationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".view.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".view.AuthenticationActivity"
+            android:name=".view.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

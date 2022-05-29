@@ -10,4 +10,7 @@
     <string name="login">ворид</string>
     <string name="userid">userID</string>
     <string name="password">password</string>
+    <string name="analytics">analytics</string>
+    <string name="timetable">timetable</string>
+    <string name="news">news</string>
 </resources>

@@ -2,11 +2,16 @@ package tj.safarovsaburjon.sthelper.view
 
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.drawable.ColorStateListDrawable
 import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
@@ -23,12 +28,12 @@ class MainActivity : BaseActivity(R.layout.activity_main),
     private lateinit var toolbar: Toolbar
     private lateinit var container: FragmentContainerView
     private lateinit var bottomNavigationView: BottomNavigationView
-    private lateinit var accountItem: CardView
+    private lateinit var accountItem: ImageView
     private var c = 0
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
         container = findViewById(R.id.container)
         toolbar = findViewById(R.id.toolbar)
@@ -36,10 +41,12 @@ class MainActivity : BaseActivity(R.layout.activity_main),
         accountItem = findViewById(R.id.accountItem)
 
         accountItem.setOnClickListener(this)
-        bottomNavigationView.selectedItemId = R.id.newsItem
-
+        bottomNavigationView.apply {
+            selectedItemId = R.id.newsItem
+            itemActiveIndicatorColor = getColorStateList(R.color.blue_dark)
+        }
         toolbar.setNavigationOnClickListener {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
@@ -64,10 +71,7 @@ class MainActivity : BaseActivity(R.layout.activity_main),
             .commit()
 
 
-
     }
-
-
 
 
     override fun onClick(v: View?) {
@@ -102,7 +106,6 @@ class MainActivity : BaseActivity(R.layout.activity_main),
                 openFragmentHelper(NotificationFragment(), "timetable")
                 return true
             }
-
 
         }
 
